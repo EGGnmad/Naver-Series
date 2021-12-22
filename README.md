@@ -8,6 +8,7 @@ Naver Series
  requires requests, beautifulsoup4   
 `python3 -m pip install Naver-Series`
 
+> https://pypi.org/project/Naver-Series/1.1.0.Beta/
 ---
 
 **option**
