@@ -2,4 +2,4 @@ import NaverSeries
 
 if __name__ == '__main__':
     #search
-    print(NaverSeries.search( input('search: ') ))
+    print(NaverSeries.getInfo(5133669))

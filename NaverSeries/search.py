@@ -26,9 +26,9 @@
 from bs4 import BeautifulSoup
 from requests import get
 
-def search(keyword:str) -> dict:
+def search(keyword:str, focus:str='novel') -> dict:
     #Request
-    url = f'https://series.naver.com/search/search.series?q={keyword}'
+    url = f'https://series.naver.com/search/search.series?fs={focus}&q={keyword}'
     response = get(url)
 
     if response.status_code == 200:
@@ -43,7 +43,6 @@ def search(keyword:str) -> dict:
                 'contents': []
             }
 
-            type = 0
             for elem1 in search_data:
                 books = elem1.select('li')
 
