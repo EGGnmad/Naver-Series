@@ -2,6 +2,11 @@ Naver Series
 ---
 > 🙏sorry for about immature english
 
+<h3>Installation</h3>
+
+---
+`python3 -m pip install Naver-Series`
+
 **option**
 
 | Symbol | Description                                                                         |
