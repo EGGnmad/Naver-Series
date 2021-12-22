@@ -5,7 +5,10 @@ Naver Series
 <h3>Installation</h3>
 
 ---
+ requires requests, beautifulsoup4   
 `python3 -m pip install Naver-Series`
+
+---
 
 **option**
 
