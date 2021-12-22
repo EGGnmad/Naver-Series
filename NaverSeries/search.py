@@ -40,14 +40,12 @@ def search(keyword:str) -> dict:
         if(len(search_data) > 0):
 
             result = {
-                'contents': {}
+                'contents': []
             }
 
             type = 0
             for elem1 in search_data:
                 books = elem1.select('li')
-
-                now = []
 
                 for elem2 in books:
                     book = {}
@@ -56,19 +54,13 @@ def search(keyword:str) -> dict:
                     book['title'] = book_info.select_one('h3').get_text().replace('\n', '').replace('\t', '')
                     book['id'] = replaceUnusingTextInProducNo(book_info.select_one('h3 a')['href'])
 
-                    if type != 2:
+                    try:
                         book['author'] = list(map(lambda x : x.replace(' ', '') , book_info.select_one('p.info span.ellipsis').get_text().split(',')))
-                    else:
+                    except:
                         book['author'] = [book_info.select_one('p.info').get_text().split('\n')[5].replace('|', '')[1:]]
 
-                    if not now.__contains__(book):
-                        now.append(book)
-
-
-                result['contents'][f'{str(type)}'] = now
-
-                #add 1 to type
-                type += 1
+                    if not result['contents'].__contains__(book):
+                        result['contents'].append(book)
 
             return result
 
