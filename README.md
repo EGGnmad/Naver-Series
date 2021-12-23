@@ -8,7 +8,7 @@ Naver Series
 ```
 python3 -m pip install Naver-Series
 ```
-[![](https://img.shields.io/badge/Pypi-link-green?style=for-the-badge)](https://pypi.org/project/Naver-Series/1.1.0.Beta/)
+[![](https://img.shields.io/badge/Pypi-link-green?style=for-the-badge)](https://pypi.org/project/Naver-Series/1.1.3.Beta/)
 
 ---
 
